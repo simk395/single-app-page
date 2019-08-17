@@ -19,7 +19,7 @@ export class main extends Component {
       <main>
         <Searchbar />
         <Results />
-        {products ? products.map(item => <Product />) : null}
+        {products ? products.map(merch => <Product product={merch} />) : null}
       </main>
     );
   }
