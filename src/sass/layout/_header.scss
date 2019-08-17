@@ -1,3 +1,37 @@
-header{
-    color:white;
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement {
+  color: white;
+  text-align: center;
+}
+
+.account {
+  display: flex;
+
+  &-search {
+    margin-right: auto;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50em;
+
+    &-item {
+      list-style: none;
+    }
+  }
 }

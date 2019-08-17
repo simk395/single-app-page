@@ -1,9 +1,16 @@
 import React from 'react'
+import Announcement from '../components/announcement'
+import Account from '../components/navAccount'
+import Logo from '../components/logo'
+import Nav from '../components/navBar'
 
-function Header() {
+const Header = () => {
     return (
         <header>
-            <p>FREE SHIPPING on all orders over $99</p>
+            <Announcement />
+            <Account />
+            <Logo />
+            <Nav />
         </header>
     )
 }
