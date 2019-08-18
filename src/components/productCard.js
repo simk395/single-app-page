@@ -8,17 +8,39 @@ import New from "./productNew";
 
 export class itemCard extends Component {
   state = {
-    image: this.props.product.image
+    img: this.props.product.image,
+    variant: this.props.product.variants[0]
   };
-  render() {
+
+  //changes display to selected product
+  getVariant = (e, variant) => {
     const { product } = this.props;
-    const { image } = this.state;
+    this.setActive(e);
+    let img = product.images.find(image => image.id === variant.image_id);
+    this.setState({ variant, img });
+  };
+
+  //checks for removes all active element for card then assigns active element
+  setActive = e => {
+    const active = "product-colors-active";
+    if (e.target.classList.contains(active)) return null;
+    let allSiblings = e.target.parentElement.children;
+    for (const element of allSiblings) {
+      element.classList.remove(active);
+    }
+    e.target.classList.add(active);
+  };
+
+  render() {
+    //colors are not centered properly for css
+    const { product } = this.props;
+    const { img, variant } = this.state;
     return (
       <div className="product-card">
-        <Picture image={image} />
-        <Colors colors={product.variants} />
+        <Picture image={img} />
+        <Colors colors={product.variants} handleColor={this.getVariant} />
         <Title title={product.title} />
-        <Price variant={product.variants[0]} />
+        <Price variant={variant} />
       </div>
     );
   }

@@ -7,9 +7,24 @@ import React from "react";
 const productColors = props => {
   return (
     <div className="product-colors">
-      {props.colors.map(color => (
-        <div className="product-colors-single" style={{ background: `${color.title}` }}></div>
-      ))}
+      {props.colors.map(color => {
+        if (color === props.colors[0])
+          return (
+            <div
+              onClick={e => props.handleColor(e, color)}
+              className="product-colors-single product-colors-active"
+              style={{ background: `${color.title}` }}
+            ></div>
+          );
+        else
+          return (
+            <div
+              onClick={e => props.handleColor(e, color)}
+              className="product-colors-single"
+              style={{ background: `${color.title}` }}
+            ></div>
+          );
+      })}
     </div>
   );
 };
