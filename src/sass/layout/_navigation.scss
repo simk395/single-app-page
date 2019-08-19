@@ -1,12 +1,12 @@
 .nav {
   display: flex;
   justify-content: center;
+  margin: 2.5em 10%;
 
   &-list {
     display: flex;
     justify-content: space-between;
-    width: 50em;
-
+    width: 70%;
     &-item {
       list-style: none;
       @include flex-row;

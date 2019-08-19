@@ -1,7 +1,7 @@
 import React from "react";
 
 const productTitle = props => {
-  return <p>{props.title}</p>;
+  return <p className="product-title">{props.title}</p>;
 };
 
 export default productTitle;

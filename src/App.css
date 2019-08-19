@@ -7,7 +7,8 @@ html {
 
 header {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  font-weight: 500; }
 
 .announcement {
   color: white;
@@ -19,11 +20,12 @@ header {
 
 .nav {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 2.5em 10%; }
   .nav-list {
     display: flex;
     justify-content: space-between;
-    width: 50em; }
+    width: 70%; }
     .nav-list-item {
       list-style: none;
       display: flex;
@@ -35,8 +37,7 @@ header {
 
 .account {
   display: flex;
-  margin: 0 10%;
-  height: 4em; }
+  margin: 0.5em 10%; }
   .account-search {
     margin-right: auto; }
   .account-hub {
@@ -64,7 +65,7 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15px;
+    top: 3px;
     left: 22px; }
 
 main {
@@ -72,6 +73,10 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 0 10%; }
+
+.results {
+  margin: 1em 0;
+  font-weight: 500; }
 
 .bg-Black {
   background: black; }
@@ -85,14 +90,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 25%; }
+    min-width: 25%;
+    margin-bottom: 4em; }
   .product-image {
     height: 20em;
     width: 16em; }
   .product-colors {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    margin: 1em 0; }
     .product-colors-single {
       height: 2em;
       width: 2em;
@@ -104,6 +111,11 @@ main {
       box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3); }
     .product-colors-active {
       border: 2px solid black; }
+  .product-title {
+    font-weight: 700;
+    margin-bottom: 3px; }
+  .product-price {
+    font-weight: 500; }
 
 .search {
   background: white;
@@ -112,7 +124,7 @@ main {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 37%;
   height: 2em;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
@@ -128,7 +140,7 @@ main {
     width: 1.5em; }
   .search-input {
     align-self: stretch;
-    width: 90%;
+    width: 75%;
     background: inherit;
     border: none; }
     .search-input:focus {

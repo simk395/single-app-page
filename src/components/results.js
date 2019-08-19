@@ -1,7 +1,7 @@
 import React from "react";
 
 const results = () => {
-  return <p>Showing Results for "hello"</p>;
+  return <h2 className="results">Showing Results for "hello"</h2>;
 };
 
 export default results;

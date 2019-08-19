@@ -20,7 +20,6 @@ export class NavAccount extends Component {
             <div className="account-cart-alert">
               <p>2</p>
             </div>
-
             <p>Cart</p>
           </div>
         </div>

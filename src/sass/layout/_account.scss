@@ -1,7 +1,6 @@
 .account {
   display: flex;
-  margin: 0 10%;
-  height: 4em;
+  margin: 0.5em 10%;
 
   &-search {
     margin-right: auto;
@@ -36,7 +35,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 15px;
+    top: 3px;
     left: 22px;
   }
 }
