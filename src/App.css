@@ -34,9 +34,38 @@ header {
         width: 1em; }
 
 .account {
-  display: flex; }
+  display: flex;
+  margin: 0 10%;
+  height: 4em; }
   .account-search {
     margin-right: auto; }
+  .account-hub {
+    display: flex;
+    flex-direction: row; }
+  .account-profile, .account-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1em;
+    position: relative; }
+    .account-profile-icon, .account-cart-icon {
+      height: 1.5em;
+      width: 1.5em;
+      margin: 0.5em; }
+  .account-cart-alert {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1.5px;
+    height: 1.2em;
+    width: 1.2em;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    left: 22px; }
 
 main {
   display: flex;

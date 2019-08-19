@@ -10,14 +10,18 @@ export class NavAccount extends Component {
           <div className="account-profile">
             <svg className="account-profile-icon">
               <use xlinkHref="img/sprite.svg#icon-user"></use>
-            </svg>{" "}
+            </svg>
             <p>Account</p>
           </div>
           <div className="account-cart">
             <svg className="account-cart-icon">
               <use xlinkHref="img/sprite.svg#icon-shopping-cart"></use>
-            </svg>{" "}
-            cart
+            </svg>
+            <div className="account-cart-alert">
+              <p>2</p>
+            </div>
+
+            <p>Cart</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,42 @@
 .account {
   display: flex;
+  margin: 0 10%;
+  height: 4em;
 
   &-search {
     margin-right: auto;
+  }
+
+  &-hub {
+    @include flex-row;
+  }
+
+  &-profile,
+  &-cart {
+    @include flex-row;
+    align-items: center;
+    padding-right: 1em;
+    position: relative;
+    &-icon {
+      height: 1.5em;
+      width: 1.5em;
+      margin: 0.5em;
+    }
+  }
+
+  &-cart-alert {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1.5px;
+    height: 1.2em;
+    width: 1.2em;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    left: 22px;
   }
 }
