@@ -24,11 +24,20 @@ export class itemCard extends Component {
   getVariant = (e, variant) => {
     const { product } = this.props;
     this.setActive(e);
+    this.getDiscount(variant);
     let img = product.images.find(image => image.id === variant.image_id);
     this.setState({ variant, img });
   };
 
-  getDiscount = () => {};
+  //changes discount based on active variant
+  getDiscount = variant => {
+    if (variant.compare_at_price) {
+      let newPrice = variant.price;
+      let oldPrice = variant.compare_at_price;
+      const discount = parseInt(Math.abs((newPrice - oldPrice) / oldPrice) * 100);
+      this.setState({ discount });
+    } else this.setState({ discount: 0 });
+  };
 
   //checks for removes all active element for card then assigns active element
   setActive = e => {
