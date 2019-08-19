@@ -1,4 +1,10 @@
-@import "./layout/header";
-@import "./components/background";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 @import "./base/reset";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/account";
+@import "./layout/body";
+@import "./components/background";
 @import "./components/product";
+@import "./components/searchbar";

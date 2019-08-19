@@ -5,10 +5,18 @@ export class Navbar extends Component {
     if (dropDown)
       return (
         <li className="nav-list-item" onMouseOver={this.handleHover}>
-          Hello
+          {item}
+          <svg className="nav-list-item-arrowDown">
+            <use xlinkHref="img/sprite.svg#icon-chevron-down"></use>
+          </svg>
         </li>
       );
-    else return <li className="nav-list-item">GoodBye</li>;
+    else
+      return (
+        <li className="nav-list-item">
+          <p>{item}</p>
+        </li>
+      );
   };
 
   handleHover = () => {

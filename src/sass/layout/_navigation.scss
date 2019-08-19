@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    width: 50em;
+
+    &-item {
+      list-style: none;
+      @include flex-row;
+      align-items: center;
+      &-arrowDown {
+        height: 1em;
+        width: 1em;
+      }
+    }
+  }
+}
