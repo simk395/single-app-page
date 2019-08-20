@@ -1,5 +1,18 @@
 .bg {
-  &-Black {
+  &__black {
     background: black;
+  }
+
+  &__gray-1 {
+    background: $gray-1;
+  }
+  &__gray-2 {
+    background: $gray-2;
+  }
+  &__gray-3 {
+    background: $gray-3;
+  }
+  &__gray-4 {
+    background: $gray-4;
   }
 }

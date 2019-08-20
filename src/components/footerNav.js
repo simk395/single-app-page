@@ -3,7 +3,7 @@ import React from "react";
 const footerNav = props => {
   const { item } = props.item;
   return (
-    <div className="footer__nav-container">
+    <div className="footer__nav-container bg__gray-2">
       <h2 className="footer__nav-container__title">{item.title}</h2>
       <ul className="footer__nav-list">
         {item.list.map(listItem => (

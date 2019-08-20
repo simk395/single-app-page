@@ -6,7 +6,7 @@ import Nav from "../components/navBar";
 
 const header = () => {
   return (
-    <header>
+    <header className="header">
       <Announcement />
       <Account />
       <Logo />

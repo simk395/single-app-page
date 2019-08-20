@@ -16,7 +16,7 @@ export class Main extends Component {
   render() {
     const { products } = this.state.merch;
     return (
-      <main>
+      <main className="main">
         <Searchbar />
         <Results />
         <section className="product">

@@ -42,7 +42,7 @@ export class Footer extends Component {
     this.displayFooterItems(width);
     return (
       <footer className="footer">
-        <div className="footer__nav">
+        <div className="footer__nav bg__gray-2">
           {Items.map(navItem => {
             if (navItem.item.title !== "Newsletter") return <Nav item={navItem} />;
             else return <Newsletter item={navItem} createImg={this.createImg} />;

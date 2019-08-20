@@ -1,12 +1,10 @@
 .product {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   flex-wrap: wrap;
   justify-content: space-around;
 
   &__card {
-    display: flex;
-    flex-direction: column;
+    @include flex-col;
     align-items: center;
     min-width: 25%;
     margin-bottom: 4em;
@@ -43,8 +41,7 @@
     }
 
     &__colors {
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       justify-content: center;
       margin: 1em 0;
       &-single {
