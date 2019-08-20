@@ -1,28 +1,76 @@
 .footer {
   &-nav {
     @include flex-row;
-    justify-content: space-evenly;
-    padding-bottom: 1em;
+    justify-content: space-between;
+    padding: 2em 10% 3em 10%;
+
     background: rgb(168, 168, 168);
   }
+
   &-list {
     color: white;
-    margin-top: 2em;
-    &-title {
-      margin-bottom: 1em;
+    &:nth-child(4) {
+      max-width: 20em;
     }
+
+    &-title {
+    }
+
     &-unordered {
+      @include flex-col;
+      justify-content: space-evenly;
       height: 15em;
     }
+
     &-item {
       list-style: none;
-      margin-bottom: 1.5em;
+
       &-anchor {
         text-decoration: none;
         color: inherit;
+
         &:hover {
           text-decoration: underline;
         }
+      }
+
+      &-signUp {
+        position: relative;
+        height: 2.5em;
+        &-input {
+          height: 100%;
+          width: 75%;
+          border-radius: 20px 0 0 20px;
+          padding-left: 13px;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &-submit {
+          height: 100%;
+          background: rgb(47, 128, 237);
+          color: white;
+          border: none;
+          width: 25%;
+          position: absolute;
+          border-radius: 0 20px 20px 0;
+          cursor: pointer;
+        }
+      }
+
+      &-icons {
+        display: inline;
+      }
+
+      &-icon {
+        height: 1.5em;
+        width: 1.5em;
+        fill: white;
+        margin-right: 1em;
+        cursor: pointer;
       }
     }
   }

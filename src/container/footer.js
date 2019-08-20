@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Items from "../footerItems";
 import Nav from "../components/footerNav";
 import Newsletter from "../components/newsletter";
+import Copyright from "../components/copyright";
 
 export class footer extends Component {
   state = {
@@ -24,7 +25,7 @@ export class footer extends Component {
     if (w < 800) {
       for (const item of list) item.style.display = "none";
     } else {
-      for (const item of list) item.style.display = "block";
+      for (const item of list) item.style.display = "flex";
     }
   };
 
@@ -39,6 +40,7 @@ export class footer extends Component {
             else return <Newsletter item={navItem} />;
           })}
         </div>
+        <Copyright />
       </footer>
     );
   }

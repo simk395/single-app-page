@@ -84,25 +84,54 @@ main {
 .footer-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding-bottom: 1em;
+  justify-content: space-between;
+  padding: 2em 10% 3em 10%;
   background: #a8a8a8; }
 
 .footer-list {
-  color: white;
-  margin-top: 2em; }
-  .footer-list-title {
-    margin-bottom: 1em; }
+  color: white; }
+  .footer-list:nth-child(4) {
+    max-width: 20em; }
   .footer-list-unordered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 15em; }
   .footer-list-item {
-    list-style: none;
-    margin-bottom: 1.5em; }
+    list-style: none; }
     .footer-list-item-anchor {
       text-decoration: none;
       color: inherit; }
       .footer-list-item-anchor:hover {
         text-decoration: underline; }
+    .footer-list-item-signUp {
+      position: relative;
+      height: 2.5em; }
+      .footer-list-item-signUp-input {
+        height: 100%;
+        width: 75%;
+        border-radius: 20px 0 0 20px;
+        padding-left: 13px;
+        border: none; }
+        .footer-list-item-signUp-input:focus {
+          outline: none; }
+      .footer-list-item-signUp-submit {
+        height: 100%;
+        background: #2f80ed;
+        color: white;
+        border: none;
+        width: 25%;
+        position: absolute;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer; }
+    .footer-list-item-icons {
+      display: inline; }
+    .footer-list-item-icon {
+      height: 1.5em;
+      width: 1.5em;
+      fill: white;
+      margin-right: 1em;
+      cursor: pointer; }
 
 .bg-Black {
   background: black; }
