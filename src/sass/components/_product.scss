@@ -4,70 +4,68 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
-  &-card {
+  &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 25%;
     margin-bottom: 4em;
-  }
 
-  &-image {
-    height: 20em;
-    width: 16em;
-  }
+    &__image {
+      height: 20em;
+      width: 16em;
 
-  &-imageContainer {
-    position: relative;
-  }
+      &-container {
+        position: relative;
+      }
+    }
 
-  &-colors {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 1em 0;
-    &-single {
-      height: 2em;
-      width: 2em;
+    &__notice {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      height: 3em;
+      width: 3em;
       border-radius: 50%;
-      margin-right: 1em;
-      cursor: pointer;
-      -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+      padding: 0.25em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      -webkit-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
+      box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
+
+      &-text {
+        text-align: center;
+        font-weight: 500;
+      }
     }
-    &-active {
-      border: 2px solid black;
+
+    &__colors {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 1em 0;
+      &-single {
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        margin-right: 1em;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+      }
+      &-active {
+        border: 2px solid black;
+      }
     }
-  }
-
-  &-title {
-    font-weight: 700;
-    margin-bottom: 3px;
-  }
-
-  &-price {
-    font-weight: 500;
-  }
-
-  &-alert {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    padding: 0.25em;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    -webkit-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
-    box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
-
-    & p {
-      text-align: center;
+    &-title {
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    &-price {
       font-weight: 500;
     }
   }

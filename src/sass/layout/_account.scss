@@ -3,41 +3,40 @@
   margin: 0.5em 10%;
   font-weight: 500;
 
-  &-search {
+  &__search {
     margin-right: auto;
   }
 
-  &-hub {
+  &__hub {
     @include flex-row;
-  }
-
-  &-profile,
-  &-cart {
-    @include flex-row;
-    align-items: center;
-    padding-right: 1em;
-    position: relative;
-    cursor: pointer;
-    &-icon {
-      height: 1.5em;
-      width: 1.5em;
-      margin: 0.5em;
+    &__profile,
+    &__cart {
+      @include flex-row;
+      align-items: center;
+      padding-right: 1em;
+      position: relative;
+      cursor: pointer;
+      &-icon {
+        height: 1.5em;
+        width: 1.5em;
+        margin: 0.5em;
+      }
     }
-  }
 
-  &-cart-alert {
-    background: red;
-    color: white;
-    border-radius: 50%;
-    padding: 1.5px;
-    height: 1.2em;
-    width: 1.2em;
-    font-size: 0.75em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 3px;
-    left: 22px;
+    &__cart-alert {
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 1.5px;
+      height: 1.2em;
+      width: 1.2em;
+      font-size: 0.75em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 3px;
+      left: 22px;
+    }
   }
 }

@@ -6,13 +6,13 @@ import React from "react";
 
 const productColors = props => {
   return (
-    <div className="product-colors">
+    <div className="product__card__colors">
       {props.colors.map(color => {
         if (color === props.colors[0])
           return (
             <div
               onClick={e => props.handleColor(e, color)}
-              className="product-colors-single product-colors-active"
+              className="product__card__colors-single product__card__colors-active"
               style={{ background: `${color.title}` }}
             ></div>
           );
@@ -20,7 +20,7 @@ const productColors = props => {
           return (
             <div
               onClick={e => props.handleColor(e, color)}
-              className="product-colors-single"
+              className="product__card__colors-single"
               style={{ background: `${color.title}` }}
             ></div>
           );

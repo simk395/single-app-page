@@ -28,9 +28,11 @@
             text-decoration: underline;
           }
         }
+
         &-signup {
           position: relative;
           height: 2.5em;
+
           &-input {
             height: 100%;
             width: 75%;
@@ -69,6 +71,7 @@
       }
     }
   }
+
   &__copyright {
     display: flex;
     justify-content: space-between;

@@ -41,7 +41,7 @@ export class itemCard extends Component {
 
   //checks for removes all active element for card then assigns active element
   setActive = e => {
-    const active = "product-colors-active";
+    const active = "product__card__colors-active";
     if (e.target.classList.contains(active)) return null;
     let allSiblings = e.target.parentElement.children;
     for (const element of allSiblings) {
@@ -57,7 +57,7 @@ export class itemCard extends Component {
     const tags = product.tags.split(" ");
     const newProduct = tags.includes("new");
     return (
-      <div className="product-card">
+      <div className="product__card">
         <Picture image={img} newProduct={newProduct} discount={discount} />
         <Colors colors={product.variants} handleColor={this.getVariant} />
         <Title title={product.title} />

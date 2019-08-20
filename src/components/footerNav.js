@@ -1,6 +1,6 @@
 import React from "react";
 
-const footerNavigation = props => {
+const footerNav = props => {
   const { item } = props.item;
   return (
     <div className="footer__nav-container">
@@ -18,4 +18,4 @@ const footerNavigation = props => {
   );
 };
 
-export default footerNavigation;
+export default footerNav;

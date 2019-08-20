@@ -4,11 +4,11 @@
   margin: 2.5em 10%;
   font-weight: 500;
 
-  &-list {
+  &__list {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    &-item {
+    &__item {
       list-style: none;
       @include flex-row;
       cursor: pointer;

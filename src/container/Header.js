@@ -4,7 +4,7 @@ import Account from "../components/navAccount";
 import Logo from "../components/logo";
 import Nav from "../components/navBar";
 
-const Header = () => {
+const header = () => {
   return (
     <header>
       <Announcement />
@@ -15,4 +15,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default header;

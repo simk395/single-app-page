@@ -4,16 +4,16 @@ export class Navbar extends Component {
   createItem = (item, dropDown = false, list) => {
     if (dropDown)
       return (
-        <li className="nav-list-item" onMouseOver={this.handleHover}>
+        <li className="nav__list__item" onMouseOver={this.handleHover}>
           {item}
-          <svg className="nav-list-item-arrowDown">
+          <svg className="nav__list__item-arrowDown">
             <use xlinkHref="img/sprite.svg#icon-chevron-down"></use>
           </svg>
         </li>
       );
     else
       return (
-        <li className="nav-list-item">
+        <li className="nav__list__item">
           <p>{item}</p>
         </li>
       );
@@ -36,7 +36,7 @@ export class Navbar extends Component {
 
     return (
       <nav className="nav">
-        <ul className="nav-list">
+        <ul className="nav__list">
           {navItems.map(navItem => this.createItem(navItem.item[0], navItem.item[1]))}
         </ul>
       </nav>

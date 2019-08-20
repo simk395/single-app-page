@@ -3,7 +3,7 @@ import Searchbar from "../components/searchBar";
 import Results from "../components/results";
 import Product from "../components/productCard";
 
-export class main extends Component {
+export class Main extends Component {
   state = {
     merch: [],
     merchFilter: []
@@ -27,4 +27,4 @@ export class main extends Component {
   }
 }
 
-export default main;
+export default Main;
