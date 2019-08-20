@@ -11,6 +11,7 @@
     &-item {
       list-style: none;
       @include flex-row;
+      cursor: pointer;
       align-items: center;
       &-arrowDown {
         height: 1em;

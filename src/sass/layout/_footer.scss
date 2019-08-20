@@ -1,0 +1,29 @@
+.footer {
+  &-nav {
+    @include flex-row;
+    justify-content: space-evenly;
+    padding-bottom: 1em;
+    background: rgb(168, 168, 168);
+  }
+  &-list {
+    color: white;
+    margin-top: 2em;
+    &-title {
+      margin-bottom: 1em;
+    }
+    &-unordered {
+      height: 15em;
+    }
+    &-item {
+      list-style: none;
+      margin-bottom: 1.5em;
+      &-anchor {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

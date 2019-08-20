@@ -30,6 +30,7 @@ header {
       list-style: none;
       display: flex;
       flex-direction: row;
+      cursor: pointer;
       align-items: center; }
       .nav-list-item-arrowDown {
         height: 1em;
@@ -49,7 +50,8 @@ header {
     flex-direction: row;
     align-items: center;
     padding-right: 1em;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .account-profile-icon, .account-cart-icon {
       height: 1.5em;
       width: 1.5em;
@@ -78,6 +80,29 @@ main {
 .results {
   margin: 1em 0;
   font-weight: 500; }
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+  background: #a8a8a8; }
+
+.footer-list {
+  color: white;
+  margin-top: 2em; }
+  .footer-list-title {
+    margin-bottom: 1em; }
+  .footer-list-unordered {
+    height: 15em; }
+  .footer-list-item {
+    list-style: none;
+    margin-bottom: 1.5em; }
+    .footer-list-item-anchor {
+      text-decoration: none;
+      color: inherit; }
+      .footer-list-item-anchor:hover {
+        text-decoration: underline; }
 
 .bg-Black {
   background: black; }
