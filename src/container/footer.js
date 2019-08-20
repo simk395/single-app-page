@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Items from "../footerItems";
-import Nav from "../components/footerNav";
+import Nav from "../components/navigation/footer";
 import Newsletter from "../components/newsletter";
 import Copyright from "../components/copyright";
 

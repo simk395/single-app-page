@@ -1,8 +1,8 @@
 import React from "react";
 import New from "./productNew";
-import Discount from "./productDiscount";
+import Discount from "./discount";
 
-const productPicture = props => {
+const image = props => {
   return (
     <div className="product__card__image-container">
       {props.newProduct ? <New /> : null}
@@ -12,4 +12,4 @@ const productPicture = props => {
   );
 };
 
-export default productPicture;
+export default image;

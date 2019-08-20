@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Searchbar from "../components/searchBar";
 import Results from "../components/results";
-import Product from "../components/productCard";
+import Product from "../components/product/Card";
 
 export class Main extends Component {
   state = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class Navbar extends Component {
+export class Bar extends Component {
   createItem = (item, dropDown = false, list) => {
     if (dropDown)
       return (
@@ -44,4 +44,4 @@ export class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default Bar;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const productPrice = props => {
+const price = props => {
   return (
     <div className="product__product__price">
       <span>
@@ -10,4 +10,4 @@ const productPrice = props => {
   );
 };
 
-export default productPrice;
+export default price;

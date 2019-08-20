@@ -9,6 +9,7 @@
 
   &__hub {
     @include flex-row;
+
     &__profile,
     &__cart {
       @include flex-row;
@@ -16,6 +17,7 @@
       padding-right: 1em;
       position: relative;
       cursor: pointer;
+
       &-icon {
         height: 1.5em;
         width: 1.5em;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const productDiscount = props => {
+const discount = props => {
   return (
     <div className="product__card__notice">
       <p className="product__card__notice-text">Save {props.percent}%</p>
@@ -8,4 +8,4 @@ const productDiscount = props => {
   );
 };
 
-export default productDiscount;
+export default discount;

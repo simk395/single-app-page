@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Picture from "./productPicture";
-import Colors from "./productColors";
-import Title from "./productTitle";
-import Price from "./productPrice";
+import Picture from "./image";
+import Colors from "./colors";
+import Title from "./title";
+import Price from "./price";
 
-export class itemCard extends Component {
+export class Card extends Component {
   state = {
     img: this.props.product.image,
     variant: this.props.product.variants[0],
@@ -67,4 +67,4 @@ export class itemCard extends Component {
   }
 }
 
-export default itemCard;
+export default Card;

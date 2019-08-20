@@ -1,9 +1,9 @@
 import React from "react";
 
-const footerNav = props => {
+const footer = props => {
   const { item } = props.item;
   return (
-    <div className="footer__nav-container bg__gray-2">
+    <div className="footer__nav-container">
       <h2 className="footer__nav-container__title">{item.title}</h2>
       <ul className="footer__nav-list">
         {item.list.map(listItem => (
@@ -18,4 +18,4 @@ const footerNav = props => {
   );
 };
 
-export default footerNav;
+export default footer;

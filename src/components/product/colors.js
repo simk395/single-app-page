@@ -4,7 +4,7 @@ import React from "react";
 // manually, where as this implication will just search for what css has to offer
 // even though its bad to do inline styling, this is automated and dynamic
 
-const productColors = props => {
+const colors = props => {
   return (
     <div className="product__card__colors">
       {props.colors.map(color => {
@@ -28,4 +28,4 @@ const productColors = props => {
     </div>
   );
 };
-export default productColors;
+export default colors;
