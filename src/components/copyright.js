@@ -1,9 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class copyright extends Component {
-  render() {
-    return <div>hello</div>;
-  }
-}
+const copyright = props => {
+  const { createImg } = props;
+  let svg = ["icon-cc-visa", "icon-mastercard", "icon-cc-paypal", "icon-americanexpress"];
+  return (
+    <div className="footer__copyright">
+      <p className="footer__copyright__text">
+        Copyright &copy; 2018 www.projectvanilla.com | Design and Build by Parkfield Commerce
+      </p>
+      <div className="footer_nav-list__item-container">{svg.map(img => createImg(img))}</div>
+    </div>
+  );
+};
 
 export default copyright;

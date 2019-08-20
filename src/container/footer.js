@@ -4,7 +4,7 @@ import Nav from "../components/footerNav";
 import Newsletter from "../components/newsletter";
 import Copyright from "../components/copyright";
 
-export class footer extends Component {
+export class Footer extends Component {
   state = {
     width: window.innerWidth
   };
@@ -29,21 +29,29 @@ export class footer extends Component {
     }
   };
 
+  createImg = img => {
+    return (
+      <svg className="footer__nav-list__item-icon">
+        <use xlinkHref={`img/sprite.svg#${img}`}></use>
+      </svg>
+    );
+  };
+
   render() {
     const { width } = this.state;
     this.displayFooterItems(width);
     return (
       <footer className="footer">
-        <div className="footer-nav">
+        <div className="footer__nav">
           {Items.map(navItem => {
             if (navItem.item.title !== "Newsletter") return <Nav item={navItem} />;
-            else return <Newsletter item={navItem} />;
+            else return <Newsletter item={navItem} createImg={this.createImg} />;
           })}
         </div>
-        <Copyright />
+        <Copyright createImg={this.createImg} />
       </footer>
     );
   }
 }
 
-export default footer;
+export default Footer;
