@@ -17,7 +17,7 @@ export class Footer extends Component {
     });
   }
   handleNavItems = e => {
-    let list = e.target.nextElementSibling;
+    let list = e.target.parentElement.nextSibling;
     if (list.style.display === "flex") list.style.display = "none";
     else list.style.display = "flex";
     this.setState({ bool: !this.state.bool });
@@ -41,9 +41,10 @@ export class Footer extends Component {
 
     return (
       <div className="footer__nav-container">
-        <div onClick={this.handleNavItems} className="footer__nav-container__head">
+        <div className="footer__nav-container__head">
           <h2 className="footer__nav-container__head-title">{item.title}</h2>
           {bool ? plus : minus}
+          <div className="footer__nav-container__head-event" onClick={this.handleNavItems}></div>
         </div>
         <ul className="footer__nav-list">
           {item.list.map(listItem => (

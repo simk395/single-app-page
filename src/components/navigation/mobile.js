@@ -13,20 +13,24 @@ const mobile = () => {
       {svg.map(img => {
         if (img.notification > 0) {
           return (
-            <div className="account__hub__cart">
-              <svg className="account__hub__icon">
-                <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
-              </svg>
-              <div className="account__hub__cart-alert">
-                <p>{img.notification}</p>
-              </div>
+            <div className="account__hub__item">
+              <a href="#">
+                <svg className="account__hub__icon">
+                  <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
+                </svg>
+                <div className="account__hub__item-alert">
+                  <p>{img.notification}</p>
+                </div>
+              </a>
             </div>
           );
         } else {
           return (
-            <svg className="account__hub__icon">
-              <use xlinkHref={`img/sprite.svg#${img.title}`} />
-            </svg>
+            <a href="#">
+              <svg className="account__hub__icon">
+                <use xlinkHref={`img/sprite.svg#${img.title}`} />
+              </svg>
+            </a>
           );
         }
       })}

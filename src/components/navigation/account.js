@@ -2,25 +2,42 @@ import React from "react";
 import Search from "../searchBar";
 
 const account = () => {
+  let svg = [
+    { title: "icon-user", notification: 0, desc: "Account" },
+    { title: "icon-shopping-cart", notification: 2, desc: "Cart" }
+  ];
   return (
     <div className="account">
       <Search />
       <div className="account__hub">
-        <div className="account__hub__profile">
-          <svg className="account__hub__icon">
-            <use xlinkHref="img/sprite.svg#icon-user"></use>
-          </svg>
-          <p>Account</p>
-        </div>
-        <div className="account__hub__cart">
-          <svg className="account__hub__icon">
-            <use xlinkHref="img/sprite.svg#icon-shopping-cart"></use>
-          </svg>
-          <div className="account__hub__cart-alert">
-            <p>2</p>
-          </div>
-          <p>Cart</p>
-        </div>
+        {svg.map(img => {
+          if (img.notification > 0) {
+            return (
+              <div className="account__hub__item">
+                <a className="account__hub__item-anchor" href="#">
+                  <svg className="account__hub__icon">
+                    <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
+                  </svg>
+                  <div className="account__hub__item-alert">
+                    <p>{img.notification}</p>
+                  </div>
+                  {img.desc}
+                </a>
+              </div>
+            );
+          } else {
+            return (
+              <div className="account__hub__item">
+                <a className="account__hub__item-anchor" href="#">
+                  <svg className="account__hub__icon">
+                    <use xlinkHref={`img/sprite.svg#${img.title}`} />
+                  </svg>
+                  {img.desc}
+                </a>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );
