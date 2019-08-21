@@ -1,7 +1,7 @@
 .product {
   @include flex-row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
   &__card {
     @include flex-col;
@@ -9,9 +9,18 @@
     min-width: 25%;
     margin-bottom: 4em;
 
+    @include respond-phone {
+      flex-basis: 50%;
+    }
+
     &__image {
       height: 20em;
       width: 16em;
+
+      @include respond-phone {
+        height: 12em;
+        width: 100%;
+      }
 
       &-container {
         position: relative;
@@ -34,6 +43,12 @@
       -moz-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
       box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
 
+      @include respond-phone {
+        transform: scale(0.75);
+        top: 0;
+        right: 0;
+      }
+
       &-text {
         text-align: center;
         font-weight: 500;
@@ -44,6 +59,10 @@
       @include flex-row;
       justify-content: center;
       margin: 1em 0;
+
+      @include respond-phone {
+        transform: scale(0.75);
+      }
 
       &-single {
         height: 2em;

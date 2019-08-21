@@ -3,12 +3,24 @@
   margin: 0.5em 10%;
   font-weight: 500;
 
+  @include respond-phone {
+    display: none;
+  }
+
   &__search {
     margin-right: auto;
   }
 
   &__hub {
     @include flex-row;
+
+    &-mobile {
+      display: none;
+      @include respond-phone {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
 
     &__profile,
     &__cart {
@@ -17,11 +29,16 @@
       padding-right: 1em;
       position: relative;
       cursor: pointer;
+    }
 
-      &-icon {
-        height: 1.5em;
-        width: 1.5em;
-        margin: 0.5em;
+    &__icon {
+      height: 1.5em;
+      width: 1.5em;
+      margin: 0.5em;
+
+      @include respond-phone {
+        height: 2em;
+        width: 2em;
       }
     }
 
@@ -39,6 +56,12 @@
       position: absolute;
       top: 3px;
       left: 22px;
+
+      @include respond-phone {
+        transform: scale(1.25);
+        top: 8px;
+        left: 28px;
+      }
     }
   }
 }

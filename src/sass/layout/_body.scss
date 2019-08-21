@@ -7,4 +7,10 @@
 .results {
   margin: 1em 0;
   font-weight: 500;
+
+  @include respond-phone {
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%;
+  }
 }

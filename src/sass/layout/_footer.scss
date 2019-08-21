@@ -4,10 +4,65 @@
     justify-content: space-between;
     padding: 2em 10% 3em 10%;
 
+    @include respond-tablet {
+      @include flex-col;
+    }
+
     &-container {
       color: white;
       &:nth-child(4) {
         max-width: 20em;
+
+        @include respond-tablet {
+          display: none;
+        }
+      }
+
+      &__mobile {
+        display: none;
+        color: white;
+        width: 50%;
+        margin-top: 3em;
+
+        & * {
+          margin-bottom: 1em;
+        }
+
+        @include respond-tablet {
+          display: block;
+        }
+        @include respond-phone {
+          width: 100%;
+        }
+      }
+
+      @include respond-tablet {
+        &:first-child {
+          border-top: 1px solid white;
+        }
+      }
+
+      &__head {
+        @include respond-tablet {
+          border-top: 1px solid white;
+          border-bottom: 1px solid white;
+          @include flex-row;
+          justify-content: space-between;
+          padding: 1em 0;
+        }
+        &-title {
+        }
+
+        &-icon {
+          display: none;
+          fill: white;
+          height: 2em;
+          width: 2em;
+
+          @include respond-tablet {
+            display: block;
+          }
+        }
       }
     }
 
@@ -15,6 +70,11 @@
       @include flex-col;
       justify-content: space-evenly;
       height: 15em;
+
+      @include respond-tablet {
+        display: none;
+        padding-left: 2em;
+      }
 
       &__item {
         list-style: none;
@@ -32,12 +92,25 @@
           position: relative;
           height: 2.5em;
 
+          @include respond-tablet {
+            height: 100%;
+            margin-bottom: 1em;
+          }
+
           &-input {
             height: 100%;
             width: 75%;
             border-radius: 20px 0 0 20px;
             padding-left: 13px;
             border: none;
+
+            @include respond-tablet {
+              height: 3em;
+              width: 100%;
+              border-radius: 20px 20px 20px 20px;
+              padding-right: 13px;
+              margin-bottom: 1em;
+            }
 
             &:focus {
               outline: none;
@@ -53,6 +126,13 @@
             position: absolute;
             border-radius: 0 20px 20px 0;
             cursor: pointer;
+
+            @include respond-tablet {
+              position: static;
+              height: 3em;
+              width: 100%;
+              border-radius: 20px 20px 20px 20px;
+            }
           }
         }
 
