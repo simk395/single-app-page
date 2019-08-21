@@ -9,13 +9,19 @@
 }
 
 @mixin respond-phone {
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     @content;
   }
 }
 
 @mixin respond-tablet {
   @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin respond-tablet-small {
+  @media (max-width: 800px) {
     @content;
   }
 }

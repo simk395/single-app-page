@@ -8,7 +8,7 @@ const copyright = props => {
       <p className="footer__copyright__text">
         Copyright &copy; 2018 www.projectvanilla.com | Design and Build by Parkfield Commerce
       </p>
-      <div className="footer_nav-list__item-container">{svg.map(img => createImg(img))}</div>
+      <div className="footer__nav-list__item-container">{svg.map(img => createImg(img))}</div>
     </div>
   );
 };

@@ -5,8 +5,18 @@ export class Footer extends Component {
     bool: true
   };
 
+  componentDidMount() {
+    const allList = document.querySelectorAll(".footer__nav-list");
+    window.addEventListener("resize", e => {
+      if (window.innerWidth > 1200) {
+        for (const element of allList) element.style.display = "flex";
+      } else {
+        for (const element of allList) element.style.display = "none";
+        this.setState({ bool: true });
+      }
+    });
+  }
   handleNavItems = e => {
-    console.log(e.target);
     let list = e.target.nextElementSibling;
     if (list.style.display === "flex") list.style.display = "none";
     else list.style.display = "flex";

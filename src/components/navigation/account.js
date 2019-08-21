@@ -4,7 +4,7 @@ import Search from "../searchBar";
 const account = () => {
   return (
     <div className="account">
-      <p className="account__search">Hello</p>
+      <Search />
       <div className="account__hub">
         <div className="account__hub__profile">
           <svg className="account__hub__icon">

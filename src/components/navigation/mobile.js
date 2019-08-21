@@ -7,6 +7,7 @@ const mobile = () => {
     { title: "icon-user", notification: 0 },
     { title: "icon-shopping-cart", notification: 2 }
   ];
+
   return (
     <div className="account__hub-mobile">
       {svg.map(img => {
@@ -17,7 +18,7 @@ const mobile = () => {
                 <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
               </svg>
               <div className="account__hub__cart-alert">
-                <p>2</p>
+                <p>{img.notification}</p>
               </div>
             </div>
           );

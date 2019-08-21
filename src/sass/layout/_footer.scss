@@ -106,9 +106,9 @@
 
             @include respond-tablet {
               height: 3em;
-              width: 100%;
+              width: 92%;
               border-radius: 20px 20px 20px 20px;
-              padding-right: 13px;
+              padding: 0 4%;
               margin-bottom: 1em;
             }
 
@@ -137,7 +137,11 @@
         }
 
         &-container {
-          display: inline;
+          display: flex;
+
+          @include respond-tablet {
+            justify-content: space-between;
+          }
         }
 
         &-icon {
@@ -146,6 +150,11 @@
           fill: white;
           margin-right: 1em;
           cursor: pointer;
+
+          @include respond-phone {
+            height: 3em;
+            width: 3em;
+          }
         }
       }
     }
@@ -156,5 +165,9 @@
     justify-content: space-between;
     color: white;
     padding: 0 10%;
+
+    @include respond-phone {
+      flex-direction: column-reverse;
+    }
   }
 }

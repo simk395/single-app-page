@@ -3,7 +3,7 @@ import Announcement from "../components/announcement";
 import Account from "../components/navigation/account";
 import Logo from "../components/logo";
 import Nav from "../components/navigation/Bar";
-import Mobile from "../components/navigation/mobile";
+import NavMobile from "../components/navigation/mobile";
 
 const header = () => {
   return (
@@ -11,8 +11,8 @@ const header = () => {
       <Announcement />
       <Account />
       <Logo />
-      {/* <Nav /> */}
-      <Mobile />
+      <Nav />
+      <NavMobile />
     </header>
   );
 };
