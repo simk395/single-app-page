@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "../searchBar";
+import Search from "../searchBarMini";
 
 const account = () => {
   let svg = [
@@ -8,6 +8,7 @@ const account = () => {
   ];
   return (
     <div className="account">
+      <Search />
       <div className="account__hub">
         {svg.map(img => {
           if (img.notification > 0) {

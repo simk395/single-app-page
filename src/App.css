@@ -18,6 +18,10 @@ html {
   justify-content: center;
   margin: 1em 0; }
 
+.mini {
+  width: 20% !important;
+  height: 1.5em !important; }
+
 .nav {
   display: flex;
   justify-content: center;
@@ -372,7 +376,8 @@ html {
   .search-btn {
     background: transparent;
     border: none;
-    cursor: pointer; }
+    cursor: pointer;
+    margin: 0 10px 0 5px; }
     .search-btn:focus {
       outline: none; }
   .search-icon {
