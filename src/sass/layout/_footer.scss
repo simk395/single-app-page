@@ -53,15 +53,17 @@
         }
 
         &-event {
+          display: none;
           content: "";
           position: absolute;
           height: 100%;
           width: 100%;
           top: 0;
           left: 0;
-        }
 
-        &-title {
+          @include respond-tablet {
+            display: block;
+          }
         }
 
         &-icon {

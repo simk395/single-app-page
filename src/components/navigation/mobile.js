@@ -13,7 +13,7 @@ const mobile = () => {
       {svg.map(img => {
         if (img.notification > 0) {
           return (
-            <div className="account__hub__item">
+            <div className="account__hub__item" key={`${img.title}`}>
               <a href="#">
                 <svg className="account__hub__icon">
                   <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
@@ -26,7 +26,7 @@ const mobile = () => {
           );
         } else {
           return (
-            <a href="#">
+            <a href="#" key={`${img.title}`}>
               <svg className="account__hub__icon">
                 <use xlinkHref={`img/sprite.svg#${img.title}`} />
               </svg>

@@ -7,7 +7,7 @@ const price = props => {
         {props.variant.compare_at_price ? (
           <p>
             {`$${props.variant.compare_at_price}`}{" "}
-            <div className="product__card__price-discount-cross"></div>
+            <span className="product__card__price-discount-cross"></span>
           </p>
         ) : null}
       </div>

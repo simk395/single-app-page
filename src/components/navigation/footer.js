@@ -48,7 +48,7 @@ export class Footer extends Component {
         </div>
         <ul className="footer__nav-list">
           {item.list.map(listItem => (
-            <li className="footer__nav-list__item">
+            <li className="footer__nav-list__item" key={`${listItem}`}>
               <a className="footer__nav-list__item-anchor" href="#">
                 {listItem}
               </a>

@@ -11,6 +11,7 @@ const colors = props => {
         if (color === props.colors[0])
           return (
             <div
+              key={`${color.id}`}
               onClick={e => props.handleColor(e, color)}
               className="product__card__colors-single product__card__colors-active"
               style={{ background: `${color.title}` }}
@@ -19,6 +20,7 @@ const colors = props => {
         else
           return (
             <div
+              key={`${color.id}`}
               onClick={e => props.handleColor(e, color)}
               className="product__card__colors-single"
               style={{ background: `${color.title}` }}

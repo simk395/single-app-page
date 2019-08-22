@@ -4,7 +4,7 @@ export class Bar extends Component {
   createItem = (item, dropDown = false, list) => {
     if (dropDown)
       return (
-        <li className="nav__list__item" onMouseOver={this.handleHover}>
+        <li className="nav__list__item" onMouseOver={this.handleHover} key={`${item}`}>
           {item}
           <svg className="nav__list__item-arrowDown">
             <use xlinkHref="img/sprite.svg#icon-chevron-down"></use>
@@ -13,7 +13,7 @@ export class Bar extends Component {
       );
     else
       return (
-        <li className="nav__list__item">
+        <li className="nav__list__item" key={`${item}`}>
           <p>{item}</p>
         </li>
       );

@@ -6,21 +6,34 @@ import Product from "../components/product/Card";
 export class Main extends Component {
   state = {
     merch: [],
-    merchFilter: []
+    merchFilter: [],
+    value: ""
   };
   componentDidMount() {
     fetch("https://young-refuge-33420.herokuapp.com/")
       .then(resp => resp.json())
-      .then(merch => this.setState({ merch, merchFilter: merch }));
+      .then(merch => this.setState({ merch: merch.products, merchFilter: merch.products }));
   }
+
+  handleSearch = e => {
+    e.preventDefault();
+    const { merch } = this.state;
+    const input = e.target.lastElementChild.value;
+    let filter = merch.filter(product => product.title.toLowerCase().includes(input.toLowerCase()));
+    this.setState({ merchFilter: filter, value: input });
+  };
+
   render() {
-    const { products } = this.state.merch;
+    const { merchFilter: products } = this.state;
+    const { value } = this.state;
     return (
       <main className="main">
-        <Searchbar />
-        <Results />
+        <Searchbar handleSearch={this.handleSearch} />
+        {value ? <Results value={value} /> : null}
         <section className="product">
-          {products ? products.map(merch => <Product product={merch} />) : null}
+          {products
+            ? products.map(merch => <Product key={`${merch.title}`} product={merch} />)
+            : null}
         </section>
       </main>
     );

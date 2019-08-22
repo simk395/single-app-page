@@ -8,12 +8,11 @@ const account = () => {
   ];
   return (
     <div className="account">
-      <Search />
       <div className="account__hub">
         {svg.map(img => {
           if (img.notification > 0) {
             return (
-              <div className="account__hub__item">
+              <div className="account__hub__item" key={`${img.title}`}>
                 <a className="account__hub__item-anchor" href="#">
                   <svg className="account__hub__icon">
                     <use xlinkHref={`img/sprite.svg#${img.title}`}></use>
@@ -27,7 +26,7 @@ const account = () => {
             );
           } else {
             return (
-              <div className="account__hub__item">
+              <div className="account__hub__item" key={`${img.title}`}>
                 <a className="account__hub__item-anchor" href="#">
                   <svg className="account__hub__icon">
                     <use xlinkHref={`img/sprite.svg#${img.title}`} />

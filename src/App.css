@@ -23,7 +23,7 @@ html {
   justify-content: center;
   margin: 2.5em 10%;
   font-weight: 500; }
-  @media (max-width: 640px) {
+  @media (max-width: 656px) {
     .nav {
       display: none; } }
   .nav__list {
@@ -45,7 +45,7 @@ html {
   margin: 0.5em 10%;
   font-weight: 500;
   justify-content: space-between; }
-  @media (max-width: 640px) {
+  @media (max-width: 656px) {
     .account {
       display: none; } }
   .account__hub {
@@ -53,7 +53,7 @@ html {
     flex-direction: row; }
     .account__hub-mobile {
       display: none; }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .account__hub-mobile {
           display: flex;
           justify-content: space-between; } }
@@ -83,7 +83,7 @@ html {
         position: absolute;
         top: 3px;
         left: 22px; }
-        @media (max-width: 640px) {
+        @media (max-width: 656px) {
           .account__hub__item-alert {
             transform: scale(1.25);
             top: 8px;
@@ -92,7 +92,7 @@ html {
       height: 1.5em;
       width: 1.5em;
       margin: 0.5em; }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .account__hub__icon {
           height: 2em;
           width: 2em; } }
@@ -106,7 +106,7 @@ html {
 .results {
   margin: 1em 0;
   font-weight: 500; }
-  @media (max-width: 640px) {
+  @media (max-width: 656px) {
     .results {
       text-align: center;
       font-size: 0.9em;
@@ -138,7 +138,7 @@ html {
       @media (max-width: 1200px) {
         .footer__nav-container__mobile {
           display: block; } }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .footer__nav-container__mobile {
           width: 100%; } }
     @media (max-width: 1200px) {
@@ -154,12 +154,16 @@ html {
         padding: 1em 0;
         position: relative; } }
     .footer__nav-container__head-event {
+      display: none;
       content: "";
       position: absolute;
       height: 100%;
       width: 100%;
       top: 0;
       left: 0; }
+      @media (max-width: 1200px) {
+        .footer__nav-container__head-event {
+          display: block; } }
     .footer__nav-container__head-icon {
       display: none;
       fill: white;
@@ -232,7 +236,7 @@ html {
         fill: white;
         margin-right: 1em;
         cursor: pointer; }
-        @media (max-width: 640px) {
+        @media (max-width: 656px) {
           .footer__nav-list__item-icon {
             height: 3em;
             width: 3em; } }
@@ -242,7 +246,7 @@ html {
   justify-content: space-between;
   color: white;
   padding: 0 10%; }
-  @media (max-width: 640px) {
+  @media (max-width: 656px) {
     .footer__copyright {
       flex-direction: column-reverse; } }
 
@@ -273,13 +277,13 @@ html {
     align-items: center;
     min-width: 25%;
     margin-bottom: 4em; }
-    @media (max-width: 640px) {
+    @media (max-width: 656px) {
       .product__card {
         flex-basis: 50%; } }
     .product__card__image {
       height: 20em;
       width: 16em; }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .product__card__image {
           height: 10em;
           width: 7.5em; } }
@@ -300,7 +304,7 @@ html {
       -webkit-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3);
       box-shadow: 3px 4px 6px -3px rgba(0, 0, 0, 0.3); }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .product__card__notice {
           transform: scale(0.75);
           top: 0;
@@ -313,7 +317,7 @@ html {
       flex-direction: row;
       justify-content: center;
       margin: 1em 0; }
-      @media (max-width: 640px) {
+      @media (max-width: 656px) {
         .product__card__colors {
           transform: scale(0.75); } }
       .product__card__colors-single {
@@ -362,7 +366,7 @@ html {
   -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2); }
-  @media (max-width: 640px) {
+  @media (max-width: 656px) {
     .search {
       width: 100%; } }
   .search-btn {
