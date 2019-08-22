@@ -16,6 +16,8 @@ export class Footer extends Component {
       }
     });
   }
+
+  // toggles list of items in footer for mobile view
   handleNavItems = e => {
     let list = e.target.parentElement.nextSibling;
     if (list.style.display === "flex") list.style.display = "none";

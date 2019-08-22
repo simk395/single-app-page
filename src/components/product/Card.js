@@ -29,7 +29,7 @@ export class Card extends Component {
     this.setState({ variant, img });
   };
 
-  //changes discount based on active variant
+  //changes discount/price based on active variant
   getDiscount = variant => {
     if (variant.compare_at_price) {
       let newPrice = variant.price;

@@ -6,6 +6,7 @@ import Copyright from "../components/copyright";
 import NewsletterMobile from "../components/newsletterMobile";
 
 const footer = () => {
+  //creates svg images to be displayed for footer
   let createImg = img => {
     return (
       <svg className="footer__nav-list__item-icon" key={`${img}`}>

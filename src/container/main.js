@@ -15,6 +15,7 @@ export class Main extends Component {
       .then(merch => this.setState({ merch: merch.products, merchFilter: merch.products }));
   }
 
+  //filters object to be updated based on searchbar input
   handleSearch = e => {
     e.preventDefault();
     const { merch } = this.state;
