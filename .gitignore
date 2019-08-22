@@ -6,6 +6,9 @@
 .pnp.js
 .prettierrc
 .editorconfig
+.firebase
+.firebaserc
+.firebase.json
 
 # testing
 /coverage
